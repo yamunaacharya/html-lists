@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students[
+<!ELEMENT books (book+)>
+<!ELEMENT book (title?, isbn+, (zipcode | author), publish*)>
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title name CDATA #IMPLIED>
+<!ELEMENT isbn (#PCDATA)>
+<!ATTLIST isbn no CDATA #REQUIRED>
+<!ELEMENT zipcode (#PCDATA)>
+<!ATTLIST zipcode Zname CDATA "232232323">
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT publish (#PCDATA)>
+<!ATTLIST publish year CDATA #FIXED "1995">
+]>
+
+<books>
+    <book>
+        <title name="xyz">ThePastandthepresent</title>
+        <isbn no="">874-4647</isbn>
+        <isbn no="">534-6547</isbn>
+        <zipcode>Z10001</zipcode>
+        <publish>First Edition</publish>
+        <publish>Second Edition</publish>
+    </book>
+    <book>
+        <isbn no="">978-04679</isbn>
+        <author>Thomas Wood</author>
+    </book>
+    <book>
+        <title>Romeoandjuilet</title>
+        <isbn no="">765-3738</isbn>
+        <zipcode/>
+        <publish>First Edition</publish>
+    </book>
+</books>

@@ -1,0 +1,21 @@
+<CUSTOMERDETAILS>
+  <customer>
+    <customerId>02312</customerId>
+    <name>Asmita</name>
+    <address>kathmandu</address>
+   </customer>
+
+    <customer>
+    <customerId>56483</customerId>
+    <name>Kabir</name>
+    <address>Dharan</address>
+   </customer>
+
+    <customer>
+    <customerId>87654</customerId>
+    <name>Saby</name>
+    <address>Pokhara</address>
+   </customer>
+
+</CUSTOMERDETAILS>
+  

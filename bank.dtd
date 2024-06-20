@@ -1,0 +1,70 @@
+<!-- Create a DTD to describe a bank that has one or more customers, accounts or employee.
+i. Each customer has a customerId, name and address
+ii. Each account has an accountId, branchId, CustomerId, Account type and balance.
+iii.Each employee has a empId, name, designation, DOB, salary, and address. -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students[
+<!ELEMENT bank (customer+, account+, employee+)>
+<!ELEMENT customer (customerId, name, address)>
+<!ELEMENT customerId (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT account (accountId, branchId, customerId, accountType, balance)>
+<!ELEMENT accountId (#PCDATA)>
+<!ELEMENT branchId (#PCDATA)>
+<!ELEMENT customerId (#PCDATA)>
+<!ELEMENT accountType (#PCDATA)>
+<!ELEMENT balance (#PCDATA)>
+
+<!ELEMENT employee (empId, name, designation, DOB, salary, address)>
+<!ELEMENT empId (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT DOB (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+]>
+
+<bank>
+    <customer>
+        <customerId>0123</customerId>
+        <name>pamela</name>
+        <address>itahari-6</address>
+    </customer>
+    <customer>
+        <customerId>0124</customerId>
+        <name>Shanti</name>
+        <address>itahari-3</address>
+    </customer>
+    <account>
+        <accountId>A1001</accountId>
+        <branchId>B001</branchIdId>
+        <customerId>0123</customerId>
+        <accountType>Savings</accountType>
+        <balance>15000.00</balance>
+    </account>
+    <account>
+        <accountId>A1002</accountId>
+        <branchId>B002</branchId>
+        <customerId>0124</customerId>
+        <accountType>Checking</accountType>
+        <balance>25000.00</balance>
+    </account>
+    <employee>
+        <empId>E001</empId>
+        <name>Michael</name>
+        <designation>Manager</designation>
+        <DOB>1995-01-15</DOB>
+        <salary>75000</salary>
+        <address>pokhara</address>
+    </employee>
+    <employee>
+        <empId>E002</empId>
+        <name>Susan</name>
+        <designation>CEO</designation>
+        <DOB>2018-06-23</DOB>
+        <salary>95000</salary>
+        <address>chitwan</address>
+    </employee>
+</bank>

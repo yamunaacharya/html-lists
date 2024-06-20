@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE TVSCHEDULE [
+<!ELEMENT TVSCHEDULE (CHANNEL+)>
+<!ELEMENT CHANNEL (BANNER,DAY+)>
+<!ELEMENT BANNER (#PCDATA)>
+<!ELEMENT DAY (DATE,(HOLIDAY|PROGRAMSLOT+)+)>
+<!ELEMENT HOLIDAY (#PCDATA)>
+<!ELEMENT DATE (#PCDATA)>
+<!ELEMENT PROGRAMSLOT (TIME,TITLE,DESCRIPTION?)>
+<!ELEMENT TIME (#PCDATA)>
+<!ELEMENT TITLE (#PCDATA)> 
+<!ELEMENT DESCRIPTION (#PCDATA)>
+<!ATTLIST TVSCHEDULE NAME CDATA #REQUIRED>
+<!ATTLIST CHANNEL CHAN CDATA #REQUIRED>
+<!ATTLIST PROGRAMSLOT VTR CDATA #IMPLIED>
+<!ATTLIST TITLE RATING CDATA #IMPLIED
+    LANGUAGE CDATA #IMPLIED>
+]>
+
+
+  <TVSCHEDULE Name="Weekly Schedule">
+    <channel Chan="101">
+    <banner>Channel 108 Banner</banner>
+    <day>
+      <date>2024-06-20</date>
+      <holiday>Public Holiday</holiday>
+    </day>
+    <day>
+      <date>2024-06-21</date>
+      <programslot Vtr="12345">
+        <time>10:00</time>
+        <title Rating="G" Language="English">Morning Show</title>
+        <description>A delightful morning show to start your day.</description>
+      </programslot>
+      <programslot>
+        <time>12:00</time>
+        <title>News</title>
+        <!-- No description provided -->
+      </programslot>
+    </day>
+    </channel>
+    <channel Chan="102">
+        <banner>Channel 102 Banner</banner>
+        <day>
+            <date>2024-06-20</date>
+            <programslot>
+                <time>08:00</time>
+                <title Language="French">Bonjour</title>
+                <description>A French morning show.</description>
+            </programslot>
+        </day>
+    </channel>
+</TVSCHEDULE>
+
+
+

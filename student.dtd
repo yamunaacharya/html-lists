@@ -1,0 +1,34 @@
+<!-- Create a XML code with DTD for the following information. 
+Each student has a name, address, phone and website element
+Address might appears multiples times.
+Address has an attribute named “type” with a value permanent and temporary.
+Phone must be 10 digit. -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students[
+   <!ELEMENT students (student+)>
+   <!ELEMENT student (name, address+, phone, website)>
+   <!ELEMENT name (#PCDATA)>
+   <!ELEMENT address (#PCDATA)>
+   <!ATTLIST address type (permanent|temporary) #REQUIRED>
+   <!ELEMENT phone (#PCDATA)>
+   <!ATTLIST phone
+         length CDATA #FIXED "10">
+   <!ELEMENT website (#PCDATA)>
+]>
+<students>
+    <student>
+        <name>Pamela</name>
+        <address type="permanent">kathmandu</address>
+        <address type="temporary">itahari</address>
+        <phone>9811330200</phone>
+        <website>www.pamela.com.np</website>
+    </student>
+    <student>
+        <name>Ripesh</name>
+        <address type="permanent">sikkim</address>
+        <address type="temporary">itahari</address>
+        <phone>9819311200</phone>
+        <website>www.ripesh.com.np</website>
+    </student>
+</students>
