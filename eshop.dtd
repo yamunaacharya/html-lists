@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE eshop[
+<!ELEMENT eShop (Product+, Customer+, Order+)>
+<!ELEMENT Product (description)>
+<!ATTLIST Product
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    category CDATA #REQUIRED
+    price CDATA #REQUIRED
+    quantity CDATA #REQUIRED
+>
+<!ELEMENT Customer (address)>
+<!ATTLIST Customer
+    id ID #REQUIRED
+    name CDATA #REQUIRED
+    email CDATA #REQUIRED
+    phone CDATA #REQUIRED
+>
+<!ELEMENT Order (OrderItem+)>
+<!ATTLIST Order
+    id ID #REQUIRED
+    customerId IDREF #REQUIRED
+    orderDate CDATA #REQUIRED
+    status CDATA #REQUIRED
+>
+<!ELEMENT OrderItem EMPTY>
+<!ATTLIST OrderItem
+    productId IDREF #REQUIRED
+    quantity CDATA #REQUIRED
+    unitPrice CDATA #REQUIRED
+>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+]>
+<eShop>
+    <Product id="P001" name="Lipstick" category="Cosmetic" price="Rs.950" quantity="60">
+        <description>Cosmetic is defined as a product that is applied to the human body for cleansing, beautifying.</description>
+    </Product>
+    <Product id="P002" name="Smartphone" category="Electronics" price="Rs.50,000" quantity="200">
+        <description>Latest model smartphone with a stunning display and great battery life.</description>
+    </Product>
+
+    <Customer id="C001" name="Pamela Rai" email="pamelarrrrr4321@gmail.com" phone="9811330200">
+        <address>itahari-6</address>
+    </Customer>
+    <Customer id="C002" name="Alina Acharya" email="yamuna321@gmail.com" phone="9819311200">
+        <address>itahari-3</address>
+    </Customer>
+
+    <Order id="C001" customerId="C001" orderDate="2024-06-21" status="Shipped">
+        <OrderItem productId="P001" quantity="1" unitPrice="Rs.950"/>
+        <OrderItem productId="P002" quantity="2" unitPrice="Rs.50,000"/>
+    </Order>
+</eShop>
