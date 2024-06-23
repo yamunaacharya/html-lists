@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<college xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="Exp1.xsd">
+
+    <student>
+      <name></name>
+      <address></address>
+      <phone></phone>
+    </student>
+
+    <subject>
+       <BCA></BCA>
+       <BIT></BIT>
+       <MIT></MIT>
+    </subject>
+
+</college>
