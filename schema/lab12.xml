@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bank xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="lab12.xsd">
+
+    <customer>
+      <customerId></customerId>
+      <name></name>
+      <address></address>
+    </customer>
+
+    <accounts>
+       <accountId></accountId>
+       <branchId></branchId>
+       <customerId></customerId>
+       <accountType></accountType>
+       <balance></balance>
+    </accounts>
+
+    <employee>
+        <employeeId></employeeId>
+        <name></name>
+        <designation></designation>
+        <DOJ></DOJ>
+        <salary></salary>
+        <address></address>
+    
+    </employee>
+
+</bank>
